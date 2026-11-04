@@ -1,5 +1,19 @@
 # @ai-sdk/cerebras
 
+## 3.0.85
+
+### Patch Changes
+
+- d9db70d: Centralize Cerebras model capabilities and provider options in a shared catalog, preserving request behavior and generating the model capability table from the catalog.
+- Updated dependencies [e0143b0]
+- Updated dependencies [934100c]
+- Updated dependencies [add01ab]
+- Updated dependencies [89aff56]
+- Updated dependencies [4bb73b0]
+  - @ai-sdk/provider@4.0.36
+  - @ai-sdk/openai-compatible@3.0.85
+  - @ai-sdk/provider-utils@5.0.75
+
 ## 3.0.84
 
 ### Patch Changes

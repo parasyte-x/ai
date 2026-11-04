@@ -1,5 +1,44 @@
 # ai
 
+## 7.0.163
+
+### Patch Changes
+
+- fd7e8a7: Preserve the order of text and complete function calls in streamed Google responses, including standalone thought signatures on empty text or reasoning parts.
+
+  Keep provider metadata on empty text parts when converting results to response messages so it can be passed back in subsequent requests.
+
+  Omit foreign-provider empty signature text when replaying history through Anthropic or Bedrock, preserving Bedrock’s existing native reasoning-history handling.
+
+- 933dae3: fix (ai): download deprecated `file-url` and `image-url` tool result content
+
+  Tool result content parts that use the deprecated `file-url` and `image-url`
+  types were converted to `file` parts with `{ type: 'url' }` data, but they were
+  never passed to the download function. When the model does not support the URL,
+  the provider received a bare URL instead of the file contents, even though the
+  replacement `file` part with `{ type: 'url' }` data was downloaded and inlined.
+
+  Downloaded legacy URL parts now use the same media type normalization as file
+  parts, resolving generic types from the response header or image bytes.
+  Legacy base64 data URLs also normalize to inline data with the media type from
+  their data URL, matching replacement file parts.
+
+- e0143b0: feat(ai): support provider-owned realtime transports
+
+  Add an optional `createTransport` interface and `provider` connection capability.
+
+- 934100c: Report the actual OpenAI Chat HTTP endpoint (also used by Azure Chat and Bedrock Mantle Chat) through optional request metadata and model-call end events. Record its host and port on OpenTelemetry chat spans without exposing URL credentials, paths, queries, or fragments. Expose only the sanitized HTTP origin in text and object generation results and step/finish callbacks. Providers that do not report an endpoint leave these attributes unset.
+- Updated dependencies [acea2b5]
+- Updated dependencies [89aff56]
+- Updated dependencies [ef2dfb5]
+- Updated dependencies [e0143b0]
+- Updated dependencies [934100c]
+- Updated dependencies [89aff56]
+- Updated dependencies [4bb73b0]
+  - @ai-sdk/gateway@4.0.136
+  - @ai-sdk/provider@4.0.36
+  - @ai-sdk/provider-utils@5.0.75
+
 ## 7.0.162
 
 ### Patch Changes

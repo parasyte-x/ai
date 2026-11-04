@@ -1,5 +1,17 @@
 # @ai-sdk/perplexity
 
+## 5.0.27
+
+### Patch Changes
+
+- 89726a0: Centralize Perplexity language, embedding, and decision capabilities and provider options in a shared catalog, preserving request behavior and generating model capability tables from the catalog.
+- Updated dependencies [e0143b0]
+- Updated dependencies [934100c]
+- Updated dependencies [89aff56]
+- Updated dependencies [4bb73b0]
+  - @ai-sdk/provider@4.0.36
+  - @ai-sdk/provider-utils@5.0.75
+
 ## 5.0.26
 
 ### Patch Changes

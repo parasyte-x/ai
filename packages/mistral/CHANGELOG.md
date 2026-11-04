@@ -1,5 +1,26 @@
 # @ai-sdk/mistral
 
+## 4.0.80
+
+### Patch Changes
+
+- b26902e: feat(mistral): add realtime transcription support
+
+  Support Voxtral realtime transcription with streaming audio, context bias, speaker diarization, speaker references, and raw turn-detection events.
+
+- 0912e0b: feat(mistral): add realtime voice agent support
+
+  Keep `livekit-client` as an optional peer dependency required only for browser
+  voice connections, so server-side consumers do not install it automatically.
+
+- 9ab42ea: Map disabled reasoning to low for Mistral Large 4 Chat models, whose supported efforts are low, medium, and high. Preserve medium reasoning and accept it through provider options instead of rejecting or remapping it.
+- Updated dependencies [e0143b0]
+- Updated dependencies [934100c]
+- Updated dependencies [89aff56]
+- Updated dependencies [4bb73b0]
+  - @ai-sdk/provider@4.0.36
+  - @ai-sdk/provider-utils@5.0.75
+
 ## 4.0.79
 
 ### Patch Changes

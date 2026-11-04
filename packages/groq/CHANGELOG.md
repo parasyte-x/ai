@@ -1,5 +1,17 @@
 # @ai-sdk/groq
 
+## 4.0.77
+
+### Patch Changes
+
+- 821cbe3: Migrate Groq language and transcription models to a shared capability catalog, preserving request behavior and generating their model capability tables from the catalog.
+- Updated dependencies [e0143b0]
+- Updated dependencies [934100c]
+- Updated dependencies [89aff56]
+- Updated dependencies [4bb73b0]
+  - @ai-sdk/provider@4.0.36
+  - @ai-sdk/provider-utils@5.0.75
+
 ## 4.0.76
 
 ### Patch Changes

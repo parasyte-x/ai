@@ -1,5 +1,17 @@
 # @ai-sdk/open-responses
 
+## 2.0.80
+
+### Patch Changes
+
+- 4b16915: emit response-metadata on response.created event in doStream
+- Updated dependencies [e0143b0]
+- Updated dependencies [934100c]
+- Updated dependencies [89aff56]
+- Updated dependencies [4bb73b0]
+  - @ai-sdk/provider@4.0.36
+  - @ai-sdk/provider-utils@5.0.75
+
 ## 2.0.79
 
 ### Patch Changes
